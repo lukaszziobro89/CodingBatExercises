@@ -138,30 +138,42 @@ public class B_String_2_Test {
         assertEquals("++xy++xy+++xy", b_string_2_tester.plusOut("12xy34xyabcxy", "xy"));
     }
 
-//    @Test
-//    public void TEST_catDog() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
-//    @Test
-//    public void TEST_xyzThere() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
-//    @Test
-//    public void TEST_mixString() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
-//    @Test
-//    public void TEST_repeatSeparator() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
+    @Test
+    public void TEST_catDog() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertTrue(b_string_2_tester.catDog("catdog"));
+        assertFalse(b_string_2_tester.catDog("catcat"));
+        assertTrue(b_string_2_tester.catDog("1cat1cadodog"));
+    }
+
+    @Test
+    public void TEST_xyzThere() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertTrue(b_string_2_tester.xyzThere("abcxyz"));
+        assertFalse(b_string_2_tester.xyzThere("abc.xyz"));
+        assertTrue(b_string_2_tester.xyzThere("xyz.abc"));
+    }
+
+    @Test
+    public void TEST_mixString() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertEquals("axbycz",b_string_2_tester.mixString("abc", "xyz"));
+        assertEquals("HTihere",b_string_2_tester.mixString("Hi", "There"));
+        assertEquals("xTxhxexre",b_string_2_tester.mixString("xxxx", "There"));
+    }
+
+    @Test
+    public void TEST_repeatSeparator() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertEquals("WordXWordXWord", b_string_2_tester.repeatSeparator("Word", "X", 3));
+        assertEquals("ThisAndThis", b_string_2_tester.repeatSeparator("This", "And", 2));
+        assertEquals("This", b_string_2_tester.repeatSeparator("This", "And", 1));
+    }
+
 //    @Test
 //    public void TEST_getSandwich() {
 //        B_String_2 b_string_2_tester = new B_String_2();

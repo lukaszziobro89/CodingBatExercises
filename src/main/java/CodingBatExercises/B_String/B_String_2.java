@@ -262,7 +262,16 @@ public class B_String_2 {
          catDog("1cat1cadodog") --> true
      */
     public boolean catDog(String str) {
-        return false;
+        int cat = 0;
+        int dog = 0;
+        for (int i = 0; i <= str.length() -3; i++) {
+             if (str.substring(i, i + 3).equals("cat")){
+                 cat++;
+             }else if (str.substring(i, i + 3).equals("dog")){
+                dog++;
+            }
+        }
+        return cat == dog;
     }
 
     /**
@@ -272,7 +281,15 @@ public class B_String_2 {
          xyzThere("abc.xyz") --> false
          xyzThere("xyz.abc") --> true
      */
-    public boolean xyzThere(String str) {
+    public boolean  xyzThere(String str) {
+        if (str.startsWith("xyz")){
+            return true;
+        }
+            for (int i = 0; i < str.length() - 2; i++) {
+                if (str.substring(i, i + 3).equals("xyz") && str.charAt(i - 1) != '.'){
+                         return true;
+                }
+            }
         return false;
     }
 
@@ -284,7 +301,31 @@ public class B_String_2 {
          mixString("xxxx", "There") --> "xTxhxexre"
      */
     public String mixString(String a, String b) {
-        return "";
+        int start = 0;
+        int longerIndex;
+        int shorterIndex;
+        String longerString;
+        StringBuilder output = new StringBuilder();
+            if (a.length() >= b.length()){
+                longerIndex = a.length();
+                longerString = a;
+                shorterIndex = b.length();
+            } else {
+                longerIndex = b.length();
+                longerString = b;
+                shorterIndex = a.length();
+            }
+                for (int i = 0; i < shorterIndex; i++) {
+                    output.append(a.charAt(i));
+                    output.append(b.charAt(i));
+                    start++;
+                }
+
+                for (int i = start; i < longerIndex; i++) {
+                    output.append(longerString.charAt(i));
+
+                }
+        return output.toString();
     }
 
     /**
@@ -295,7 +336,15 @@ public class B_String_2 {
          repeatSeparator("This", "And", 1) --> "This"
      */
     public String repeatSeparator(String word, String sep, int count) {
-        return "";
+        StringBuilder output = new StringBuilder();
+            for (int i = 0; i < count; i++) {
+                if (i == count - 1){
+                    output.append(word);
+                } else {
+                    output.append(word).append(sep);
+                }
+            }
+        return output.toString();
     }
 
     /**
