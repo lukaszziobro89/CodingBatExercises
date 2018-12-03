@@ -187,7 +187,15 @@ public class B_String_2 {
          repeatFront("Ice Cream", 2) --> "IcI"
      */
     public String repeatFront(String str, int n) {
-        return "";
+        StringBuilder output = new StringBuilder();
+        int k = n;
+            if (n >= 0 && n <= str.length()){
+                for (int i = 0; i < n; i++) {
+                     output.append(str, 0, k);
+                     k--;
+                }
+            }
+            return output.toString();
     }
 
     /**
@@ -198,7 +206,15 @@ public class B_String_2 {
          xyzMiddle("AxyzBBB") --> false
      */
     public boolean xyzMiddle(String str) {
-        return false;
+        int beginIndex = 0;
+        int endIndex = 0;
+            for (int i = 0; i < str.length() - 2; i++) {
+                 if (str.substring(i, i + 3).equals("xyz")){
+                     beginIndex = i;
+                     endIndex = i + 3;
+                 }
+            }
+        return Math.abs(str.substring(0, beginIndex).length() - str.substring(endIndex).length()) <= 1;
     }
 
     /**
@@ -210,7 +226,15 @@ public class B_String_2 {
          oneTwo("tcagdo") --> "catdog"
      */
     public String oneTwo(String str) {
-        return "";
+        StringBuilder output = new StringBuilder();
+            for (int i = 0; i < str.length(); i++) {
+                 if (i <= str.length() - 3){
+                     output.append(str, i + 1, i + 3);
+                     output.append(str, i, i + 1);
+                     i += 2;
+                 }
+            }
+        return output.toString();
     }
 
     /**
@@ -221,7 +245,14 @@ public class B_String_2 {
          plusOut("12xy34xyabcxy", "xy") --> "++xy++xy+++xy"
      */
     public String plusOut(String str, String word) {
-        return "";
+        str = str.replace(word, "@@");
+            for (int i = 0; i < str.length(); i++) {
+                 if (str.charAt(i) != '@'){
+                     str = str.replace(str.substring(i, i + 1), "+");
+                 }
+            }
+        str = str.replace("@@", word);
+        return str;
     }
 
     /**

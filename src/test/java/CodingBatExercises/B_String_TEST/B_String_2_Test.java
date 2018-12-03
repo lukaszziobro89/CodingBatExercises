@@ -102,30 +102,42 @@ public class B_String_2_Test {
         assertFalse(b_string_2_tester.xyBalance("yaaxbb"));
     }
 
-//    @Test
-//    public void TEST_repeatFront() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
-//    @Test
-//    public void TEST_xyzMiddle() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
-//    @Test
-//    public void TEST_oneTwo() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
-//    @Test
-//    public void TEST_plusOut() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
+    @Test
+    public void TEST_repeatFront() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertEquals("ChocChoChC", b_string_2_tester.repeatFront("Chocolate", 4));
+        assertEquals("ChoChC", b_string_2_tester.repeatFront("Chocolate", 3));
+        assertEquals("IcI", b_string_2_tester.repeatFront("Ice Cream", 2));
+    }
+
+    @Test
+    public void TEST_xyzMiddle() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertTrue(b_string_2_tester.xyzMiddle("AAxyzBB"));
+        assertTrue(b_string_2_tester.xyzMiddle("AxyzBB"));
+        assertFalse(b_string_2_tester.xyzMiddle("AxyzBBB"));
+    }
+
+    @Test
+    public void TEST_oneTwo() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertEquals("bca", b_string_2_tester.oneTwo("abc"));
+        assertEquals("cat", b_string_2_tester.oneTwo("tca"));
+        assertEquals("catdog", b_string_2_tester.oneTwo("tcagdo"));
+    }
+
+    @Test
+    public void TEST_plusOut() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertEquals("++xy++", b_string_2_tester.plusOut("12xy34", "xy"));
+        assertEquals("1+++++", b_string_2_tester.plusOut("12xy34", "1"));
+        assertEquals("++xy++xy+++xy", b_string_2_tester.plusOut("12xy34xyabcxy", "xy"));
+    }
+
 //    @Test
 //    public void TEST_catDog() {
 //        B_String_2 b_string_2_tester = new B_String_2();
