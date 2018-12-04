@@ -192,10 +192,4 @@ public class B_String_2_Test {
         assertEquals("zpzp", b_string_2_tester.zipZap("zopzop"));
         assertEquals("zzzpzp", b_string_2_tester.zipZap("zzzopzop"));
     }
-
-//    @Test
-//    public void TEST_wordEnds() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
 }
