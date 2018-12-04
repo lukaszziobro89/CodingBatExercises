@@ -353,9 +353,27 @@ public class B_String_2 {
          getSandwich("breadjambread") --> "jam"
          getSandwich("xxbreadjambreadyy") --> "jam"
          getSandwich("xxbreadyy") --> ""
+         getSandwich("breadyybread") --> "yy"
      */
     public String getSandwich(String str) {
-        return "";
+        if(str.length() <= 10) return "";
+        StringBuilder output = new StringBuilder();
+        int beginIndex=0;
+        int endIndex=0;
+        int bread = 0;
+            for (int i = 0; i < str.length() - 4; i++) {
+                 if (str.substring(i, i + 5).equals("bread")){
+                     bread++;
+                         if(bread == 1){
+                             beginIndex = i + 5;
+                             i+=5;
+                         } else if (bread == 2){
+                             endIndex = i;
+                         }
+                 }
+            }
+        output.append(str, beginIndex, endIndex);
+        return output.toString();
     }
 
     /**
@@ -366,7 +384,16 @@ public class B_String_2 {
          zipZap("zzzopzop") --> "zzzpzp"
      */
     public String zipZap(String str) {
-        return "";
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+             if (str.substring(i).length() >= 2 && str.charAt(i)=='z' && str.charAt(i + 2)=='p'){
+                 output.append(str.charAt(i)).append(str.charAt(i + 2));
+                 i += 2;
+             }else {
+                 output.append(str.charAt(i));
+             }
+        }
+        return output.toString();
     }
 
     /**

@@ -174,18 +174,25 @@ public class B_String_2_Test {
         assertEquals("This", b_string_2_tester.repeatSeparator("This", "And", 1));
     }
 
-//    @Test
-//    public void TEST_getSandwich() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
-//    @Test
-//    public void TEST_zipZap() {
-//        B_String_2 b_string_2_tester = new B_String_2();
-//
-//    }
-//
+    @Test
+    public void TEST_getSandwich() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertEquals("jam", b_string_2_tester.getSandwich("breadjambread"));
+        assertEquals("jam", b_string_2_tester.getSandwich("xxbreadjambreadyy"));
+        assertEquals("", b_string_2_tester.getSandwich("xxbreadyy"));
+        assertEquals("yy", b_string_2_tester.getSandwich("breadyybread"));
+    }
+
+    @Test
+    public void TEST_zipZap() {
+        B_String_2 b_string_2_tester = new B_String_2();
+
+        assertEquals("zpXzp", b_string_2_tester.zipZap("zipXzap"));
+        assertEquals("zpzp", b_string_2_tester.zipZap("zopzop"));
+        assertEquals("zzzpzp", b_string_2_tester.zipZap("zzzopzop"));
+    }
+
 //    @Test
 //    public void TEST_wordEnds() {
 //        B_String_2 b_string_2_tester = new B_String_2();
