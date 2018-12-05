@@ -157,31 +157,73 @@ public class C_Array_2_Test {
         assertArrayEquals(new int[]{1,99,0}, c_array_2_tester.withoutTen(nums3));
     }
 
-//    @Test
-//    public void TEST_fizzBuzz() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_bigDiff() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_sum67() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_sum28() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_only14() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
+    @Test
+    public void TEST_fizzBuzz() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        String[] nums1 = new String[]{"1", "2", "Fizz", "4", "Buzz"};
+        String[] nums2 = new String[]{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7"};
+        String[] nums3 = new String[]{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"};
+
+        assertArrayEquals(nums1, c_array_2_tester.fizzBuzz(1, 6));
+        assertArrayEquals(nums2, c_array_2_tester.fizzBuzz(1, 8));
+        assertArrayEquals(nums3, c_array_2_tester.fizzBuzz(1, 11));
+    }
+
+    @Test
+    public void TEST_bigDiff() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{10, 3, 5, 6};
+        int[] nums2 = new int[]{7, 2, 10, 9};
+        int[] nums3 = new int[]{2, 10, 7, 2};
+
+        assertEquals(7, c_array_2_tester.bigDiff(nums1));
+        assertEquals(8, c_array_2_tester.bigDiff(nums2));
+        assertEquals(8, c_array_2_tester.bigDiff(nums3));
+    }
+
+    @Test
+    public void TEST_sum67() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,2,2};
+        int[] nums2 = new int[]{1,2,2,6,99,99,7};
+        int[] nums3 = new int[]{1,1,6,7,2};
+
+        assertEquals(5, c_array_2_tester.sum67(nums1));
+        assertEquals(5, c_array_2_tester.sum67(nums2));
+        assertEquals(4, c_array_2_tester.sum67(nums3));
+    }
+
+    @Test
+    public void TEST_sum28() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{2,3,2,2,4,2};
+        int[] nums2 = new int[]{2,3,2,2,4,2,2};
+        int[] nums3 = new int[]{1,2,3,4};
+
+        assertTrue(c_array_2_tester.sum28(nums1));
+        assertFalse(c_array_2_tester.sum28(nums2));
+        assertFalse(c_array_2_tester.sum28(nums3));
+    }
+
+    @Test
+    public void TEST_only14() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,4,1,4};
+        int[] nums2 = new int[]{1,4,2,4};
+        int[] nums3 = new int[]{1,1};
+        int[] nums4 = new int[]{4,4};
+
+        assertTrue(c_array_2_tester.only14(nums1));
+        assertFalse(c_array_2_tester.only14(nums2));
+        assertTrue(c_array_2_tester.only14(nums3));
+        assertTrue(c_array_2_tester.only14(nums4));
+    }
+
 //    @Test
 //    public void TEST_isEverywhere() {
 //        C_Array_2 c_array_2_tester = new C_Array_2();

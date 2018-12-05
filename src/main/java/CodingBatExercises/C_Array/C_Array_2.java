@@ -204,6 +204,123 @@ public class C_Array_2 {
         return output;
     }
 
+    /**
+     This is slightly more difficult version of the famous FizzBuzz problem which is sometimes given as a first problem
+     for job interviews. Consider the series of numbers beginning at start and running up to but not including end,
+     so for example start=1 and end=5 gives the series 1, 2, 3, 4. Return a new String[] array containing the string
+     form of these numbers, except for multiples of 3, use "Fizz" instead of the number, for multiples of 5 use "Buzz",
+     and for multiples of both 3 and 5 use "FizzBuzz". In Java, String.valueOf(xxx) will make the String form of an int
+     or other type. This version is a little more complicated than the usual version since you have to allocate and index
+     into an array instead of just printing, and we vary the start/end instead of just always doing 1..100.
+        fizzBuzz(1, 6) → ["1", "2", "Fizz", "4", "Buzz"]
+        fizzBuzz(1, 8) → ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7"]
+        fizzBuzz(1, 11) → ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]
+     */
+    public String[] fizzBuzz(int start, int end) {
+        String[] output = new String[end - start];
+            for (int i = 0; i < output.length; i++) {
+                    if (start % 3 == 0 && start % 5 == 0){
+                        output[i] = "FizzBuzz";
+                    }else if (start % 3 == 0){
+                        output[i] = "Fizz";
+                    }else if (start % 5 == 0) {
+                        output[i] = "Buzz";
+                    } else {
+                        output[i] = String.valueOf(start);
+                    }
+                start++;
+            }
+        return output;
+    }
+
+    /**
+     Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array.
+     Note: the built-in Math.min(v1, v2) and Math.max(v1, v2) methods return the smaller or larger of two values.
+         bigDiff([10, 3, 5, 6]) → 7
+         bigDiff([7, 2, 10, 9]) → 8
+         bigDiff([2, 10, 7, 2]) → 8
+     */
+    public int bigDiff(int[] nums) {
+        int max = nums[0];
+        int min = nums[0];
+            for (int i = 1; i < nums.length; i++) {
+                max = Math.max(max, nums[i]);
+                min = Math.min(min, nums[i]);
+            }
+        return (max - min);
+    }
+
+    /**
+     Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the
+     next 7 (every 6 will be followed by at least one 7). Return 0 for no numbers.
+         sum67([1, 2, 2]) → 5
+         sum67([1, 2, 2, 6, 99, 99, 7]) → 5
+         sum67([1, 1, 6, 7, 2]) → 4
+    */
+    public int sum67(int[] nums) {
+        int sum = 0;
+        boolean is6 = false;
+        boolean is7 = false;
+        for (int num : nums) {
+            if (num == 6) is6 = true;
+            if (num == 7) is7 = true;
+            if (is6) {
+                if (is7) {
+                    is6 = false;
+                }
+            } else {
+                sum += num;
+            }
+        }
+        return sum;
+    }
+
+    /**
+     Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
+         sum28([2, 3, 2, 2, 4, 2]) → true
+         sum28([2, 3, 2, 2, 4, 2, 2]) → false
+         sum28([1, 2, 3, 4]) → false
+     */
+    public boolean sum28(int[] nums) {
+        int sum8 = 0;
+            for(int num : nums){
+                if (num == 2) sum8+=2;
+            }
+        return sum8 == 8;
+    }
+
+    /**
+     Given an array of ints, return true if every element is a 1 or a 4.
+         only14([1, 4, 1, 4]) → true
+         only14([1, 4, 2, 4]) → false
+         only14([1, 1]) → true
+     */
+    public boolean only14(int[] nums) {
+        boolean isOnly14 = true;
+            for (int num : nums) {
+                if (num != 1 && num != 4) isOnly14 = false;
+            }
+        return isOnly14;
+    }
+
+    /**
+     We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in the array,
+     at least one of the pair is that value. Return true if the given value is everywhere in the array.
+         isEverywhere([1, 2, 1, 3], 1) → true
+         isEverywhere([1, 2, 1, 3], 2) → false
+         isEverywhere([1, 2, 1, 3, 4], 1) → false
+     */
+    public boolean isEverywhere(int[] nums, int val) {
+        return false;
+    }
+
+    /**
+
+     */
+
+    /**
+
+     */
 
 
 }
