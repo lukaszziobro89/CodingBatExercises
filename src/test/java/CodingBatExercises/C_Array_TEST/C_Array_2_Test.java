@@ -224,81 +224,203 @@ public class C_Array_2_Test {
         assertTrue(c_array_2_tester.only14(nums4));
     }
 
-//    @Test
-//    public void TEST_isEverywhere() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_has77() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_haveThree() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_tripleUp() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_tenRun() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_notAlone() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_zeroMax() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_centeredAverage() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_has22() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_more14() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_fizzArray2() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_either24() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_has12() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_twoTwo() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_fizzArray3() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
+    @Test
+    public void TEST_isEverywhere() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,2,1,3};
+        int[] nums2 = new int[]{1,2,1,3};
+        int[] nums3 = new int[]{1,2,1,3,4};
+
+        assertTrue(c_array_2_tester.isEverywhere(nums1, 1));
+        assertFalse(c_array_2_tester.isEverywhere(nums2, 2));
+        assertFalse(c_array_2_tester.isEverywhere(nums3, 1));
+    }
+
+    @Test
+    public void TEST_has77() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,7,7};
+        int[] nums2 = new int[]{1,7,1,7};
+        int[] nums3 = new int[]{1,7,1,1,7};
+
+        assertTrue(c_array_2_tester.has77(nums1));
+        assertTrue(c_array_2_tester.has77(nums2));
+        assertFalse(c_array_2_tester.has77(nums3));
+    }
+
+    @Test
+    public void TEST_haveThree() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{3,1,3,1,3};
+        int[] nums2 = new int[]{3,1,3,3};
+        int[] nums3 = new int[]{3,4,3,3,4};
+
+        assertTrue(c_array_2_tester.haveThree(nums1));
+        assertFalse(c_array_2_tester.haveThree(nums2));
+        assertFalse(c_array_2_tester.haveThree(nums3));
+    }
+
+    @Test
+    public void TEST_tripleUp() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,4,5,6,2};
+        int[] nums2 = new int[]{1,2,3};
+        int[] nums3 = new int[]{1,2,4};
+
+        assertTrue(c_array_2_tester.tripleUp(nums1));
+        assertTrue(c_array_2_tester.tripleUp(nums2));
+        assertFalse(c_array_2_tester.tripleUp(nums3));
+    }
+
+    @Test
+    public void TEST_tenRun() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+
+        int[] nums1 = new int[]{2, 10, 3, 4, 20, 5};
+        int[] nums2 = new int[]{10, 1, 20, 2};
+        int[] nums3 = new int[]{10, 1, 9, 20};
+
+        assertArrayEquals(new int[]{2, 10, 10, 10, 20, 20}, c_array_2_tester.tenRun(nums1));
+        assertArrayEquals(new int[]{10, 10, 20, 20}, c_array_2_tester.tenRun(nums2));
+        assertArrayEquals(new int[]{10, 10, 10, 20}, c_array_2_tester.tenRun(nums3));
+    }
+
+    @Test
+    public void TEST_notAlone() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,2,3};
+        int[] nums2 = new int[]{1,2,3,2,5,2};
+        int[] nums3 = new int[]{3,4};
+
+        assertArrayEquals(new int[]{1,3,3}, c_array_2_tester.notAlone(nums1, 2));
+        assertArrayEquals(new int[]{1,3,3,5,5,2}, c_array_2_tester.notAlone(nums2, 2));
+        assertArrayEquals(new int[]{3,4}, c_array_2_tester.notAlone(nums3,3 ));
+    }
+
+    @Test
+    public void TEST_zeroMax() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{0,5,0,3};
+        int[] nums2 = new int[]{0,4,0,3};
+        int[] nums3 = new int[]{0,1,0};
+
+        assertArrayEquals(new int[]{5,5,3,3}, c_array_2_tester.zeroMax(nums1));
+        assertArrayEquals(new int[]{3,4,3,3}, c_array_2_tester.zeroMax(nums2));
+        assertArrayEquals(new int[]{1,1,0}, c_array_2_tester.zeroMax(nums3));
+    }
+
+    @Test
+    public void TEST_centeredAverage() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,2,3,4,100};
+        int[] nums2 = new int[]{1,1,5,5,10,8,7};
+        int[] nums3 = new int[]{-10, -4, -2, -4, -2, 0};
+
+        assertEquals(3, c_array_2_tester.centeredAverage(nums1));
+        assertEquals(5, c_array_2_tester.centeredAverage(nums2));
+        assertEquals(-3, c_array_2_tester.centeredAverage(nums3));
+    }
+
+    @Test
+    public void TEST_has22() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,2,2};
+        int[] nums2 = new int[]{1,2,1,2};
+        int[] nums3 = new int[]{2,1,2};
+
+        assertTrue(c_array_2_tester.has22(nums1));
+        assertFalse(c_array_2_tester.has22(nums2));
+        assertFalse(c_array_2_tester.has22(nums3));
+    }
+
+    @Test
+    public void TEST_more14() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,4,1};
+        int[] nums2 = new int[]{1,4,1,4};
+        int[] nums3 = new int[]{1,1};
+
+        assertTrue(c_array_2_tester.more14(nums1));
+        assertFalse(c_array_2_tester.more14(nums2));
+        assertTrue(c_array_2_tester.more14(nums3));
+    }
+
+    @Test
+    public void TEST_fizzArray2() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        String[] nums1 = new String[]{"0", "1", "2", "3"};
+        String[] nums2 = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        String[] nums3 = new String[]{"0", "1"};
+
+        assertArrayEquals(nums1, c_array_2_tester.fizzArray2(4));
+        assertArrayEquals(nums2, c_array_2_tester.fizzArray2(10));
+        assertArrayEquals(nums3, c_array_2_tester.fizzArray2(2));
+    }
+
+    @Test
+    public void TEST_either24() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,2,2};
+        int[] nums2 = new int[]{4,4,1};
+        int[] nums3 = new int[]{4,4,1,2,2};
+
+        assertTrue(c_array_2_tester.either24(nums1));
+        assertTrue(c_array_2_tester.either24(nums2));
+        assertFalse(c_array_2_tester.either24(nums3));
+    }
+
+    @Test
+    public void TEST_has12() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,3,2};
+        int[] nums2 = new int[]{3,1,2};
+        int[] nums3 = new int[]{3,1,4,5,2};
+
+        assertTrue(c_array_2_tester.has12(nums1));
+        assertTrue(c_array_2_tester.has12(nums2));
+        assertTrue(c_array_2_tester.has12(nums3));
+    }
+
+    @Test
+    public void TEST_twoTwo() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{4,2,2,3};
+        int[] nums2 = new int[]{2,2,4};
+        int[] nums3 = new int[]{2,2,4,2};
+
+        assertTrue(c_array_2_tester.twoTwo(nums1));
+        assertTrue(c_array_2_tester.twoTwo(nums2));
+        assertFalse(c_array_2_tester.twoTwo(nums3));
+    }
+
+    @Test
+    public void TEST_fizzArray3() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{5,6,7,8,9};
+        int[] nums2 = new int[]{11, 12, 13, 14, 15, 16, 17};
+        int[] nums3 = new int[]{1,2};
+
+        assertArrayEquals(nums1, c_array_2_tester.fizzArray3(5, 10));
+        assertArrayEquals(nums2, c_array_2_tester.fizzArray3(11, 18));
+        assertArrayEquals(nums3, c_array_2_tester.fizzArray3(1, 3));
+    }
+
+
 //    @Test
 //    public void TEST_pre4() {
 //        C_Array_2 c_array_2_tester = new C_Array_2();
