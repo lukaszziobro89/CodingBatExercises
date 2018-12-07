@@ -588,7 +588,18 @@ public class C_Array_2 {
          pre4([1, 4, 4]) --> [1]
      */
     public int[] pre4(int[] nums) {
-        return new int[2];
+        int first4Index = 0;
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] == 4){
+                    first4Index = i;
+                    break;
+                }
+            }
+        int[] output = new int[first4Index];
+            for (int i = 0; i < output.length; i++) {
+                output[i] = nums[i];
+            }
+        return output;
     }
 
     /**
@@ -600,7 +611,20 @@ public class C_Array_2 {
          zeroFront([1, 0]) --> [0, 1]
      */
     public int[] zeroFront(int[] nums) {
-        return new int[2];
+        int[] output = new int[nums.length];
+        int zeroCounter = 0;
+            for(int num : nums){
+                if (num ==0) zeroCounter++;
+            }
+            for (int i = 0; i < zeroCounter; i++) {
+                output[i] = 0;
+            }
+            for (int num : nums) {
+                if (num != 0) {
+                    output[zeroCounter++] = num;
+                }
+            }
+        return output;
     }
 
     /**
@@ -612,8 +636,18 @@ public class C_Array_2 {
          evenOdd([2, 2, 2]) --> [2, 2, 2]
      */
     public int[] evenOdd(int[] nums) {
-        return new int[2];
+        int[] output = new int[nums.length];
+        int counter = 0;
+            for (int num : nums){
+                if (num % 2 == 0) {
+                    output[counter++] = num;
+                }
+            }
+            for (int num : nums){
+                if (num % 2 != 0) {
+                    output[counter++] = num;
+                }
+            }
+        return output;
     }
-
-
 }

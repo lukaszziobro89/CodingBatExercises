@@ -421,18 +421,44 @@ public class C_Array_2_Test {
     }
 
 
-//    @Test
-//    public void TEST_pre4() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_zeroFront() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
-//
-//    @Test
-//    public void TEST_evenOdd() {
-//        C_Array_2 c_array_2_tester = new C_Array_2();
-//    }
+    @Test
+    public void TEST_pre4() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,2,4,1};
+        int[] nums2 = new int[]{3,1,4};
+        int[] nums3 = new int[]{1,4,4};
+        int[] nums4 = new int[]{1};
+
+        assertArrayEquals(new int[]{1,2}, c_array_2_tester.pre4(nums1));
+        assertArrayEquals(new int[]{3,1}, c_array_2_tester.pre4(nums2));
+        assertArrayEquals(new int[]{1}, c_array_2_tester.pre4(nums3));
+        assertArrayEquals(new int[]{}, c_array_2_tester.pre4(nums4));
+    }
+
+    @Test
+    public void TEST_zeroFront() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,0,0,1};
+        int[] nums2 = new int[]{0,1,1,0,1};
+        int[] nums3 = new int[]{1,0};
+
+        assertArrayEquals(new int[]{0,0,1,1}, c_array_2_tester.zeroFront(nums1));
+        assertArrayEquals(new int[]{0,0,1,1,1}, c_array_2_tester.zeroFront(nums2));
+        assertArrayEquals(new int[]{0,1}, c_array_2_tester.zeroFront(nums3));
+    }
+
+    @Test
+    public void TEST_evenOdd() {
+        C_Array_2 c_array_2_tester = new C_Array_2();
+
+        int[] nums1 = new int[]{1,0,1,0,0,1,1};
+        int[] nums2 = new int[]{3,3,2};
+        int[] nums3 = new int[]{2,2,2};
+
+        assertArrayEquals(new int[]{0,0,0,1,1,1,1}, c_array_2_tester.evenOdd(nums1));
+        assertArrayEquals(new int[]{2,3,3}, c_array_2_tester.evenOdd(nums2));
+        assertArrayEquals(new int[]{2,2,2}, c_array_2_tester.evenOdd(nums3));
+    }
 }
