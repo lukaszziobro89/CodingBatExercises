@@ -29,13 +29,6 @@ public class B_String_3_Test {
         assertFalse(b_string_3.gHappy("gxxxx"));
     }
 
-//    @Test
-//    public void TEST_sameEnds(){
-//        B_String_3 b_string_3 = new B_String_3();
-//
-//
-//    }
-
     @Test
     public void TEST_sumNumbers(){
         B_String_3 b_string_3 = new B_String_3();
@@ -65,14 +58,14 @@ public class B_String_3_Test {
         assertEquals(0, b_string_3.countTriple("a"));
     }
 
-//    @Test
-//    public void TEST_mirrorEnds(){
-//        B_String_3 b_string_3 = new B_String_3();
-//
-//        assertEquals("ab", b_string_3.mirrorEnds("abXYZba"));
-//        assertEquals("a", b_string_3.mirrorEnds("abca"));
-//        assertEquals("aba", b_string_3.mirrorEnds("aba"));
-//    }
+    @Test
+    public void TEST_mirrorEnds(){
+        B_String_3 b_string_3 = new B_String_3();
+
+        assertEquals("ab", b_string_3.mirrorEnds("abXYZba"));
+        assertEquals("a", b_string_3.mirrorEnds("abca"));
+        assertEquals("aba", b_string_3.mirrorEnds("aba"));
+    }
 
     @Test
     public void TEST_notReplace(){

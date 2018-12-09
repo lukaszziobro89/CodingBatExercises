@@ -48,18 +48,6 @@ public class B_String_3 {
     }
 
     /**
-     Given a string, return the longest substring that appears at both the beginning and end of the string without overlapping.
-     For example: 
-         sameEnds("abXab") --> "ab".
-         sameEnds("abXYab") --> "ab"
-         sameEnds("xx") --> "x"
-         sameEnds("xxx") --> "x"
-     */
-    public String sameEnds(String string) {
-        return "";
-    }
-
-    /**
      Given a string, return the sum of the numbers appearing in the string, ignoring all other characters.
      A number is a series of 1 or more digit chars in a row. (Note: Character.isDigit(char) tests if a char is
      one of the chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
@@ -128,7 +116,26 @@ public class B_String_3 {
          mirrorEnds("aba") --> "aba"
      */
     public String mirrorEnds(String string) {
-        return "";
+        StringBuilder output = new StringBuilder();
+        // check if string is palindrome
+        String reversedString = reverse(string);
+        if (string.equals(reversedString)) return string;
+
+            for (int i = 0; i <= string.length() / 2; i++) {
+                if (string.substring(0, i + 1).equals(reverse(string.substring(string.length() - i - 1)))) {
+                    output.append(string.charAt(i));
+                }else{
+                    break;
+                }
+            }
+        return output.toString();
+    }
+
+    private static String reverse(String string){
+        StringBuilder reversed = new StringBuilder();
+        reversed.append(string);
+        reversed.reverse();
+        return reversed.toString();
     }
 
     /**
