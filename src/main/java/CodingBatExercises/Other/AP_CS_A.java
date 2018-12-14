@@ -176,6 +176,12 @@ public class AP_CS_A {
          hasOne(220) → false
      */
     public boolean hasOne(int n) {
+        String num = Integer.toString(n);
+            for (int i = 0; i < num.length(); i++) {
+                 int lastDigit = n % 10;
+                 if (lastDigit == 1) return true;
+                 n /= 10;
+            }
         return false;
     }
 

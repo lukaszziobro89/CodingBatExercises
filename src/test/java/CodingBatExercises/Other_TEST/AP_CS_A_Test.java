@@ -119,12 +119,15 @@ public class AP_CS_A_Test {
         assertEquals(0, ap_cs_a.wordsCount(words, 4));
     }
 
-//    @Test
-//    public void TEST_hasOne(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
+    @Test
+    public void TEST_hasOne(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        assertTrue(ap_cs_a.hasOne(10));
+        assertFalse(ap_cs_a.hasOne(22));
+        assertFalse(ap_cs_a.hasOne(220));
+    }
+
 //    @Test
 //    public void TEST_copyEndy(){
 //        AP_CS_A ap_cs_a = new AP_CS_A();
