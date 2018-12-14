@@ -87,22 +87,35 @@ public class AP_CS_A {
          scoreUp(["a", "a", "b", "b"], ["a", "c", "b", "c"]) → 6
          scoreUp(["a", "a", "b", "b"], ["a", "a", "b", "c"]) → 11
          scoreUp(["a", "a", "b", "b"], ["a", "a", "b", "b"]) → 16
+         scoreUp(["a", "a", "b", "b"], ["a", "?", "c", "?"]) → 3
      */
     public int scoreUp(String[] key, String[] answers) {
-        return 0;
+        int score = 0;
+        int i = 0;
+            for (String answer : answers){
+                if (answer.equals("?")) continue;
+                if (answer.equals(key[i])) score += 4;
+                if (!(answer.equals(key[i]))) score -= 1;
+                i++;
+            }
+        return score;
     }
 
     /**
      We have an array of heights, representing the altitude along a walking trail. Given start/end indexes into
      the array, return the sum of the changes for a walk beginning at the start index and ending at the end index.
      For example, with the heights {5, 3, 6, 7, 2} and start=2, end=4 yields a sum of 1 + 5 = 6.
-     The start end end index will both be valid indexes into the array with start <= end.
+     The start and end index will both be valid indexes into the array with start <= end.
          sumHeights([5, 3, 6, 7, 2], 2, 4) → 6
          sumHeights([5, 3, 6, 7, 2], 0, 1) → 2
          sumHeights([5, 3, 6, 7, 2], 0, 4) → 11
      */
     public int sumHeights(int[] heights, int start, int end) {
-        return 0;
+        int sum = 0;
+            for (int i = start; i < end; i++) {
+                sum += Math.abs(heights[i + 1] - heights[i]);
+            }
+        return sum;
     }
 
     /**
@@ -118,6 +131,12 @@ public class AP_CS_A {
          userCompare("bb", 1, "bb", 1) → 0
      */
     public int userCompare(String aName, int aId, String bName, int bId) {
+        if(aName.compareTo(bName) < 0) return -1;
+        if (aName.compareTo(bName) > 0) return 1;
+        if (aName.compareTo(bName) == 0){
+            if (aId > bId) return -1;
+            if (aId < bId) return 1;
+        }
         return 0;
     }
 
@@ -129,6 +148,9 @@ public class AP_CS_A {
          scores100([100, 1, 100, 100]) → true
      */
     public boolean scores100(int[] scores) {
+            for (int i = 0; i < scores.length - 1; i++) {
+                if (scores[i] == 100 && scores[i + 1]==100) return true;
+            }
         return false;
     }
 

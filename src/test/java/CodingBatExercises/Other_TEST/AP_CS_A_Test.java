@@ -59,30 +59,55 @@ public class AP_CS_A_Test {
     }
 
 
-//    @Test
-//    public void TEST_scoreUp(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
-//    @Test
-//    public void TEST_sumHeights(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
-//    @Test
-//    public void TEST_userCompare(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
-//    @Test
-//    public void TEST_scores100(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
+    @Test
+    public void TEST_scoreUp(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        String[] keys = new String[]{"a", "a", "b", "b"};
+        String[] answers1 = new String[]{"a", "c", "b", "c"};
+        String[] answers2 = new String[]{"a", "a", "b", "c"};
+        String[] answers3 = new String[]{"a", "a", "b", "b"};
+        String[] answers4 = new String[]{"a", "?", "c", "?"};
+
+        assertEquals(6, ap_cs_a.scoreUp(keys, answers1));
+        assertEquals(11, ap_cs_a.scoreUp(keys, answers2));
+        assertEquals(16, ap_cs_a.scoreUp(keys, answers3));
+        assertEquals(3, ap_cs_a.scoreUp(keys, answers4));
+    }
+
+    @Test
+    public void TEST_sumHeights(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        int[] nums = new int[]{5,3,6,7,2};
+
+        assertEquals(6, ap_cs_a.sumHeights(nums, 2,4));
+        assertEquals(2, ap_cs_a.sumHeights(nums, 0,1));
+        assertEquals(11, ap_cs_a.sumHeights(nums, 0,4));
+    }
+
+    @Test
+    public void TEST_userCompare(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        assertEquals(-1, ap_cs_a.userCompare("bb", 1, "zz", 2));
+        assertEquals(1, ap_cs_a.userCompare("bb", 1, "aa", 2));
+        assertEquals(0, ap_cs_a.userCompare("bb", 1, "bb", 1));
+    }
+
+    @Test
+    public void TEST_scores100(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        int[] nums1 = new int[]{1,100,100};
+        int[] nums2 = new int[]{1,100,99,100};
+        int[] nums3 = new int[]{100,1,100,100};
+
+        assertTrue(ap_cs_a.scores100(nums1));
+        assertFalse(ap_cs_a.scores100(nums2));
+        assertTrue(ap_cs_a.scores100(nums3));
+    }
+
 //    @Test
 //    public void TEST_wordsCount(){
 //        AP_CS_A ap_cs_a = new AP_CS_A();
