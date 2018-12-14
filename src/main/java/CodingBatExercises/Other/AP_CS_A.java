@@ -161,7 +161,11 @@ public class AP_CS_A {
          wordsCount(["a", "bb", "b", "ccc"], 4) → 0
      */
     public int wordsCount(String[] words, int len) {
-        return 0;
+        int counter = 0;
+            for (String word : words) {
+                if (word.length() == len) counter++;
+            }
+        return counter;
     }
 
     /**

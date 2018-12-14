@@ -108,12 +108,17 @@ public class AP_CS_A_Test {
         assertTrue(ap_cs_a.scores100(nums3));
     }
 
-//    @Test
-//    public void TEST_wordsCount(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
+    @Test
+    public void TEST_wordsCount(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        String[] words = new String[]{"a", "bb", "b", "ccc"};
+
+        assertEquals(2, ap_cs_a.wordsCount(words, 1));
+        assertEquals(1, ap_cs_a.wordsCount(words, 3));
+        assertEquals(0, ap_cs_a.wordsCount(words, 4));
+    }
+
 //    @Test
 //    public void TEST_hasOne(){
 //        AP_CS_A ap_cs_a = new AP_CS_A();
