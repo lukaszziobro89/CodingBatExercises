@@ -295,7 +295,11 @@ public class AP_CS_A {
          matchUp(["aa", "bb", "cc"], ["", "", "ccc"]) → 1
      */
     public int matchUp(String[] a, String[] b) {
-        return 0;
+        int counter = 0;
+            for (int i = 0; i < a.length; i++) {
+                if (a[i].length() > 0 && b[i].length() > 0 && a[i].charAt(0) == b[i].charAt(0)) counter++;
+            }
+        return counter;
     }
 
     /**

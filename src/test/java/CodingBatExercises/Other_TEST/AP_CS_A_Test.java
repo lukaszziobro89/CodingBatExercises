@@ -187,12 +187,21 @@ public class AP_CS_A_Test {
         assertArrayEquals(new String[]{"a", "b", "c", "d"}, ap_cs_a.wordsFront(words, 4));
     }
 
-//    @Test
-//    public void TEST_matchUp(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
+    @Test
+    public void TEST_matchUp(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        String[] wordsSample = new String[]{"aa", "bb", "cc"};
+
+        String[] words1 = new String[]{"aaa", "xx", "bb",};
+        String[] words2 = new String[]{"aaa", "b", "bb"};
+        String[] words3 = new String[]{"", "", "ccc"};
+
+        assertEquals(1, ap_cs_a.matchUp(wordsSample, words1));
+        assertEquals(2, ap_cs_a.matchUp(wordsSample, words2));
+        assertEquals(1, ap_cs_a.matchUp(wordsSample, words3));
+    }
+
 //    @Test
 //    public void TEST_scoresSpecial(){
 //        AP_CS_A ap_cs_a = new AP_CS_A();
