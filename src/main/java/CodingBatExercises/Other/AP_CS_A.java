@@ -195,7 +195,19 @@ public class AP_CS_A {
          copyEndy([12, 1, 1, 13, 0, 20], 2) → [1, 1]
      */
     public int[] copyEndy(int[] nums, int count) {
-        return new int[0];
+        int[] output = new int[count];
+        int i = 0;
+            for (int num : nums) {
+                if (isEndy(num)) {
+                    output[i++] = num;
+                    if (i == count) break;
+                }
+            }
+        return output;
+    }
+
+    private boolean isEndy(int n){
+        return (n >= 0 && n <= 10) || (n >= 90 && n <= 100);
     }
 
     /**
@@ -233,7 +245,12 @@ public class AP_CS_A {
          sumHeights2([5, 3, 6, 7, 2], 0, 4) → 15
      */
     public int sumHeights2(int[] heights, int start, int end) {
-        return 0;
+        int sum = 0;
+        for (int i = start; i < end; i++) {
+
+            sum += Math.abs(heights[i + 1] - heights[i]);
+        }
+        return sum;
     }
 
     /**

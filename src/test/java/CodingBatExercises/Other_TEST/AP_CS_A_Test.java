@@ -128,11 +128,17 @@ public class AP_CS_A_Test {
         assertFalse(ap_cs_a.hasOne(220));
     }
 
-//    @Test
-//    public void TEST_copyEndy(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
+    @Test
+    public void TEST_copyEndy(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        int[] nums1 = new int[]{9, 11, 90, 22, 6};
+        int[] nums2 = new int[]{12, 1, 1, 13, 0, 20};
+
+        assertArrayEquals(new int[]{9,90}, ap_cs_a.copyEndy(nums1, 2));
+        assertArrayEquals(new int[]{9,90,6}, ap_cs_a.copyEndy(nums1, 3));
+        assertArrayEquals(new int[]{1,1}, ap_cs_a.copyEndy(nums2, 2));
+    }
 
     @Test
     public void TEST_wordsWithout(){
