@@ -280,23 +280,10 @@ public class AP_CS_A {
      */
     public String[] wordsFront(String[] words, int n) {
         String[] output = new String[n];
-            for (int i = 0; i < output.length; i++) {
-                String s = output[i];
+            for (int i = 0; i < n; i++) {
+                output[i] = words[i];
             }
         return output;
-    }
-
-    /**
-     We'll say that a positive int divides itself if every digit in the number divides into the number evenly.
-     So for example 128 divides itself since 1, 2, and 8 all divide into 128 evenly. We'll say that 0 does not
-     divide into anything evenly, so no number with a 0 digit divides itself. Note: use % to get the rightmost digit,
-     and / to discard the rightmost digit.
-         dividesSelf(128) → true
-         dividesSelf(12) → true
-         dividesSelf(120) → false
-     */
-    public boolean dividesSelf(int n) {
-        return false;
     }
 
     /**

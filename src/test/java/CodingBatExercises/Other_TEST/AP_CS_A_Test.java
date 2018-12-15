@@ -175,18 +175,18 @@ public class AP_CS_A_Test {
         assertTrue(ap_cs_a.scoresClump(nums3));
     }
 
-//    @Test
-//    public void TEST_wordsFront(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
-//    @Test
-//    public void TEST_dividesSelf(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
+    @Test
+    public void TEST_wordsFront(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        String[] words = new String[]{"a", "b", "c", "d"};
+
+        assertArrayEquals(new String[]{"a"}, ap_cs_a.wordsFront(words, 1));
+        assertArrayEquals(new String[]{"a", "b"}, ap_cs_a.wordsFront(words, 2));
+        assertArrayEquals(new String[]{"a", "b", "c"}, ap_cs_a.wordsFront(words, 3));
+        assertArrayEquals(new String[]{"a", "b", "c", "d"}, ap_cs_a.wordsFront(words, 4));
+    }
+
 //    @Test
 //    public void TEST_matchUp(){
 //        AP_CS_A ap_cs_a = new AP_CS_A();
