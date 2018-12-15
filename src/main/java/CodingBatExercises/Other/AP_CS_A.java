@@ -247,24 +247,13 @@ public class AP_CS_A {
     public int sumHeights2(int[] heights, int start, int end) {
         int sum = 0;
         for (int i = start; i < end; i++) {
-
-            sum += Math.abs(heights[i + 1] - heights[i]);
+            if(heights[i + 1] - heights[i] > 0){
+                sum += 2*(Math.abs(heights[i + 1] - heights[i]));
+            }else{
+                sum += Math.abs(heights[i + 1] - heights[i]);
+            }
         }
         return sum;
-    }
-
-    /**
-     Start with two arrays of strings, A and B, each with its elements in alphabetical order and without duplicates.
-     Return a new array containing the first N elements from the two arrays. The result array should be in alphabetical
-     order and without duplicates. A and B will both have a length which is N or more.
-     The best "linear" solution makes a single pass over A and B, taking advantage of the fact that they are
-     in alphabetical order, copying elements directly to the new array.
-         mergeTwo(["a", "c", "z"], ["b", "f", "z"], 3) → ["a", "b", "c"]
-         mergeTwo(["a", "c", "z"], ["c", "f", "z"], 3) → ["a", "c", "f"]
-         mergeTwo(["f", "g", "z"], ["c", "f", "g"], 3) → ["c", "f", "g"]
-     */
-    public String[] mergeTwo(String[] a, String[] b, int n) {
-        return new String[0];
     }
 
     /**
@@ -275,6 +264,11 @@ public class AP_CS_A {
          scoresClump([1, 3, 5, 5]) → true
      */
     public boolean scoresClump(int[] scores) {
+            for (int i = 0; i < scores.length - 2; i++) {
+                if (Math.abs(scores[i + 1] - scores[i]) <= 2 &&
+                        Math.abs(scores[i + 2] - scores[i + 1]) <= 2 &&
+                        Math.abs(scores[i + 2] - scores[i]) <= 2) return true;
+            }
         return false;
     }
 
@@ -285,7 +279,11 @@ public class AP_CS_A {
          wordsFront(["a", "b", "c", "d"], 3) → ["a", "b", "c"]
      */
     public String[] wordsFront(String[] words, int n) {
-        return new String[0];
+        String[] output = new String[n];
+            for (int i = 0; i < output.length; i++) {
+                String s = output[i];
+            }
+        return output;
     }
 
     /**

@@ -151,24 +151,30 @@ public class AP_CS_A_Test {
         assertArrayEquals(new String[]{"a","b","a"}, ap_cs_a.wordsWithout(words1, "c"));
     }
 
-//    @Test
-//    public void TEST_sumHeights2(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
-//    @Test
-//    public void TEST_mergeTwo(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
-//    @Test
-//    public void TEST_scoresClump(){
-//        AP_CS_A ap_cs_a = new AP_CS_A();
-//
-//    }
-//
+    @Test
+    public void TEST_sumHeights2(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        int[] nums = new int[]{5, 3, 6, 7, 2};
+
+        assertEquals(7, ap_cs_a.sumHeights2(nums, 2 ,4 ));
+        assertEquals(2, ap_cs_a.sumHeights2(nums, 0, 1));
+        assertEquals(15, ap_cs_a.sumHeights2(nums, 0, 4));
+    }
+
+    @Test
+    public void TEST_scoresClump(){
+        AP_CS_A ap_cs_a = new AP_CS_A();
+
+        int[] nums1 = new int[]{3,4,5};
+        int[] nums2 = new int[]{3,4,6};
+        int[] nums3 = new int[]{1,3,5,5};
+
+        assertTrue(ap_cs_a.scoresClump(nums1));
+        assertFalse(ap_cs_a.scoresClump(nums2));
+        assertTrue(ap_cs_a.scoresClump(nums3));
+    }
+
 //    @Test
 //    public void TEST_wordsFront(){
 //        AP_CS_A ap_cs_a = new AP_CS_A();
