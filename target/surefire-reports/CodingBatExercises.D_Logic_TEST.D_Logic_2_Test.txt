@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: CodingBatExercises.D_Logic_TEST.D_Logic_2_Test
--------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in CodingBatExercises.D_Logic_TEST.D_Logic_2_Test

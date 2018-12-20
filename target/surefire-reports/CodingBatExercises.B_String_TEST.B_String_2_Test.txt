@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: CodingBatExercises.B_String_TEST.B_String_2_Test
--------------------------------------------------------------------------------
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in CodingBatExercises.B_String_TEST.B_String_2_Test
