@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: CodingBatExercises.C_Array_TEST.C_Array_2_Test
+-------------------------------------------------------------------------------
+Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in CodingBatExercises.C_Array_TEST.C_Array_2_Test

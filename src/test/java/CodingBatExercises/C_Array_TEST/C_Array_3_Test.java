@@ -45,34 +45,4 @@ public class C_Array_3_Test {
         assertArrayEquals(nums2, c_array_3_tester.seriesUp(4));
         assertArrayEquals(nums3, c_array_3_tester.seriesUp(2));
     }
-
-//    @Test
-//    public void TEST_fix34(){
-//        C_Array_3 c_array_3_tester = new C_Array_3();
-//    }
-//
-//    @Test
-//    public void TEST_linearIn(){
-//        C_Array_3 c_array_3_tester = new C_Array_3();
-//    }
-//
-//    @Test
-//    public void TEST_maxMirror(){
-//        C_Array_3 c_array_3_tester = new C_Array_3();
-//    }
-//
-//    @Test
-//    public void TEST_fix45(){
-//        C_Array_3 c_array_3_tester = new C_Array_3();
-//    }
-//
-//    @Test
-//    public void TEST_squareUp(){
-//        C_Array_3 c_array_3_tester = new C_Array_3();
-//    }
-//
-//    @Test
-//    public void TEST_countClumps(){
-//        C_Array_3 c_array_3_tester = new C_Array_3();
-//    }
 }
