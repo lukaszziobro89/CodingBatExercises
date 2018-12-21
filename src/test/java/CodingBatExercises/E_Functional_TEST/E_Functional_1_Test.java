@@ -16,4 +16,11 @@ public class E_Functional_1_Test {
         assertEquals(Arrays.asList(12,16,12,16,-2), e_functional_1.doubling(Arrays.asList(6,8,6,8,-1)));
         assertEquals(Collections.emptyList(), e_functional_1.doubling(Collections.emptyList()));
     }
+
+    @Test
+    public void TEST_copies3(){
+        assertEquals(Arrays.asList("aaa", "bbbbbb", "ccccccccc"), e_functional_1.copies3(Arrays.asList("a", "bb", "ccc")));
+        assertEquals(Arrays.asList("242424", "aaa", ""), e_functional_1.copies3(Arrays.asList("24", "a", "")));
+        assertEquals(Arrays.asList("hellohellohello", "theretherethere"), e_functional_1.copies3(Arrays.asList("hello", "there")));
+    }
 }
