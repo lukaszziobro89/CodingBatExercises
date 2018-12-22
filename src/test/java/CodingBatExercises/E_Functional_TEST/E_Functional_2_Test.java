@@ -66,4 +66,11 @@ public class E_Functional_2_Test {
         assertEquals(Arrays.asList("a", "bb"), e_functional_2_tester.no34( Arrays.asList("a", "bb", "ccc", "dddd")));
         assertEquals(Collections.singletonList("apple"), e_functional_2_tester.no34( Arrays.asList("ccc", "dddd", "apple")));
     }
+
+    @Test
+    public void TEST_square56(){
+        assertEquals(Arrays.asList(19, 11), e_functional_2_tester.square56(Arrays.asList(3, 1, 4)));
+        assertEquals(Collections.singletonList(11), e_functional_2_tester.square56(Collections.singletonList(1)));
+        assertEquals(Collections.singletonList(14), e_functional_2_tester.square56(Collections.singletonList(2)));
+    }
 }
