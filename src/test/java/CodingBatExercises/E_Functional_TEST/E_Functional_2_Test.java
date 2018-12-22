@@ -38,4 +38,11 @@ public class E_Functional_2_Test {
         assertEquals(Collections.singletonList(3), e_functional_2_tester.no9(Arrays.asList(9, 19, 29, 3)));
         assertEquals(Arrays.asList(1,2,3), e_functional_2_tester.no9(Arrays.asList(1, 2, 3)));
     }
+
+    @Test
+    public void TEST_noLong(){
+        assertEquals(Arrays.asList("not", "too"), e_functional_2_tester.noLong(Arrays.asList("this", "not", "too", "long")));
+        assertEquals(Arrays.asList("a", "bbb"), e_functional_2_tester.noLong(Arrays.asList("a", "bbb", "cccc")));
+        assertEquals(Collections.emptyList(), e_functional_2_tester.noLong(Arrays.asList("cccc", "cccc", "cccc")));
+    }
 }
