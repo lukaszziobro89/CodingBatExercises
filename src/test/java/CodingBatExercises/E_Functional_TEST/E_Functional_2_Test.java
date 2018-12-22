@@ -17,4 +17,11 @@ public class E_Functional_2_Test {
         assertEquals(Arrays.asList(3,3), e_functional_2_tester.noNeg(Arrays.asList(-3, -3, 3, 3)));
         assertEquals(Collections.emptyList(), e_functional_2_tester.noNeg(Arrays.asList(-1,-1,-1)));
     }
+
+    @Test
+    public void TEST_noZ(){
+        assertEquals(Arrays.asList("aaa", "bbb"), e_functional_2_tester.noZ(Arrays.asList("aaa", "bbb", "aza")));
+        assertEquals(Collections.singletonList("hi"), e_functional_2_tester.noZ(Arrays.asList("hziz", "hzello", "hi")));
+        assertEquals(Arrays.asList("hello", "are"), e_functional_2_tester.noZ(Arrays.asList("hello", "howz", "are", "youz")));
+    }
 }
