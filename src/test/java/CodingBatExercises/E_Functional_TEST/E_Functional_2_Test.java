@@ -31,4 +31,11 @@ public class E_Functional_2_Test {
         assertEquals(Arrays.asList("ay", "by"), e_functional_2_tester.noYY(Arrays.asList("a", "b", "cy")));
         assertEquals(Arrays.asList("xxy", "yay", "zzy"), e_functional_2_tester.noYY(Arrays.asList("xx", "ya", "zz")));
     }
+
+    @Test
+    public void TEST_no9(){
+        assertEquals(Arrays.asList(1,2), e_functional_2_tester.no9(Arrays.asList(1, 2, 19)));
+        assertEquals(Collections.singletonList(3), e_functional_2_tester.no9(Arrays.asList(9, 19, 29, 3)));
+        assertEquals(Arrays.asList(1,2,3), e_functional_2_tester.no9(Arrays.asList(1, 2, 3)));
+    }
 }
