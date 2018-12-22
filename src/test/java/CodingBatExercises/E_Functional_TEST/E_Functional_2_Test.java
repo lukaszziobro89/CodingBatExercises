@@ -49,7 +49,14 @@ public class E_Functional_2_Test {
     @Test
     public void TEST_two2(){
         assertEquals(Arrays.asList(4,6), e_functional_2_tester.two2(Arrays.asList(1,2,3)));
-        assertEquals(Arrays.asList(4), e_functional_2_tester.two2(Arrays.asList(2,6,11)));
+        assertEquals(Collections.singletonList(4), e_functional_2_tester.two2(Arrays.asList(2,6,11)));
         assertEquals(Collections.emptyList(), e_functional_2_tester.two2(Collections.emptyList()));
+    }
+
+    @Test
+    public void TEST_noTeen(){
+        assertEquals(Arrays.asList(12,20), e_functional_2_tester.noTeen(Arrays.asList(12, 13, 19, 20)));
+        assertEquals(Arrays.asList(1,1), e_functional_2_tester.noTeen(Arrays.asList(1, 14, 1)));
+        assertEquals(Collections.emptyList(), e_functional_2_tester.noTeen(Collections.singletonList(15)));
     }
 }
