@@ -45,4 +45,11 @@ public class E_Functional_2_Test {
         assertEquals(Arrays.asList("a", "bbb"), e_functional_2_tester.noLong(Arrays.asList("a", "bbb", "cccc")));
         assertEquals(Collections.emptyList(), e_functional_2_tester.noLong(Arrays.asList("cccc", "cccc", "cccc")));
     }
+
+    @Test
+    public void TEST_two2(){
+        assertEquals(Arrays.asList(4,6), e_functional_2_tester.two2(Arrays.asList(1,2,3)));
+        assertEquals(Arrays.asList(4), e_functional_2_tester.two2(Arrays.asList(2,6,11)));
+        assertEquals(Collections.emptyList(), e_functional_2_tester.two2(Collections.emptyList()));
+    }
 }
