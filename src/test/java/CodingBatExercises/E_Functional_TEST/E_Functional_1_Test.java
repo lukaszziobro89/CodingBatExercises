@@ -37,4 +37,11 @@ public class E_Functional_1_Test {
         assertEquals(Arrays.asList(36,64,36,64,1), e_functional_1.square(Arrays.asList(6,8,-6,-8,1)));
         assertEquals(Collections.emptyList(), e_functional_1.square(Collections.emptyList()));
     }
+
+    @Test
+    public void TEST_moreY(){
+        assertEquals(Arrays.asList("yay", "yby", "ycy"), e_functional_1.moreY(Arrays.asList("a", "b", "c")));
+        assertEquals(Arrays.asList("yhelloy", "ytherey"), e_functional_1.moreY(Arrays.asList("hello", "there")));
+        assertEquals(Collections.singletonList("yyayy"), e_functional_1.moreY(Collections.singletonList("yay")));
+    }
 }

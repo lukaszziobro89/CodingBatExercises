@@ -52,6 +52,18 @@ public class E_Functional_1 {
                 .collect(Collectors.toList());
     }
 
+    /**
+    Given a list of strings, return a list where each string has "y" added at its start and end.
+        moreY(["a", "b", "c"]) → ["yay", "yby", "ycy"]
+        moreY(["hello", "there"]) → ["yhelloy", "ytherey"]
+        moreY(["yay"]) → ["yyayy"]
+     */
+    public List<String> moreY(List<String> strings) {
+        return strings.stream()
+                .map(str -> "y" + str + "y")
+                .collect(Collectors.toList());
+    }
+
 
 
 }
