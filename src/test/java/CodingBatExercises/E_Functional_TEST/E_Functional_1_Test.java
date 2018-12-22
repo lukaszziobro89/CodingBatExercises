@@ -44,4 +44,11 @@ public class E_Functional_1_Test {
         assertEquals(Arrays.asList("yhelloy", "ytherey"), e_functional_1.moreY(Arrays.asList("hello", "there")));
         assertEquals(Collections.singletonList("yyayy"), e_functional_1.moreY(Collections.singletonList("yay")));
     }
+
+    @Test
+    public void TEST_lower(){
+        assertEquals(Arrays.asList("hello", "hi"), e_functional_1.lower(Arrays.asList("Hello", "Hi")));
+        assertEquals(Arrays.asList("aaa", "bbb", "ccc"), e_functional_1.lower(Arrays.asList("AAA", "BBB", "ccc")));
+        assertEquals(Arrays.asList("kitten", "chocolate"), e_functional_1.lower(Arrays.asList("KitteN", "ChocolaTE")));
+    }
 }
