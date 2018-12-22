@@ -30,4 +30,11 @@ public class E_Functional_1_Test {
         assertEquals(Arrays.asList(6,8,6,8,1), e_functional_1.rightDigit(Arrays.asList(16, 8, 886, 8, 1)));
         assertEquals(Arrays.asList(0,0), e_functional_1.rightDigit(Arrays.asList(10, 0)));
     }
+
+    @Test
+    public void TEST_suqare(){
+        assertEquals(Arrays.asList(1,4,9), e_functional_1.square(Arrays.asList(1,2,3)));
+        assertEquals(Arrays.asList(36,64,36,64,1), e_functional_1.square(Arrays.asList(6,8,-6,-8,1)));
+        assertEquals(Collections.emptyList(), e_functional_1.square(Collections.emptyList()));
+    }
 }
