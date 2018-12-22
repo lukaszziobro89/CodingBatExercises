@@ -58,4 +58,11 @@ public class E_Functional_1_Test {
         assertEquals(Arrays.asList("hello*", "there*"), e_functional_1.addStar(Arrays.asList("hello", "there")));
         assertEquals(Collections.singletonList("**"), e_functional_1.addStar(Collections.singletonList("*")));
     }
+
+    @Test
+    public void TEST_math1(){
+        assertEquals(Arrays.asList(20, 30, 40), e_functional_1.math1(Arrays.asList(1, 2, 3)));
+        assertEquals(Arrays.asList(70, 90, 70, 90, 20), e_functional_1.math1(Arrays.asList(6, 8, 6, 8, 1)));
+        assertEquals(Collections.singletonList(110), e_functional_1.math1(Collections.singletonList(10)));
+    }
 }
